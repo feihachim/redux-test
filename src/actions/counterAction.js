@@ -12,6 +12,13 @@ const decrement = (value) => {
   };
 };
 
-const counterAction = { increment, decrement };
+const addDigit = (value) => {
+  return {
+    type: "ADD_DIGIT",
+    step: value
+  }
+}
+
+const counterAction = { increment, decrement, addDigit };
 
 export default counterAction;

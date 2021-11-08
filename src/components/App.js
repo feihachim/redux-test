@@ -18,11 +18,17 @@ function App() {
   function handleDecrement(e) {
     dispatch(allActions.counterAction.decrement(1));
   }
+
+  function handleDigit(e) {
+    dispatch(allActions.counterAction.addDigit(1));
+  }
+
   return (
     <div className="App">
       <Button value="Decrement" dispatch={handleDecrement} />
       <Display output={counter} />
       <Button value="Increment" dispatch={handleIncrement} />
+      <Button value="Add digit" dispatch={handleDigit} />
     </div>
   );
 }
