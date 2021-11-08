@@ -1,6 +1,8 @@
 import "../styles/App.css";
 import { useSelector, useDispatch } from "react-redux";
 import allActions from "../actions";
+import Button from "./Button";
+import Display from "./Display";
 
 function App() {
   const counter = useSelector((state) => {
@@ -18,9 +20,9 @@ function App() {
   }
   return (
     <div className="App">
-      <button onClick={handleDecrement}>Decrement</button>
-      <h1>{counter}</h1>
-      <button onClick={handleIncrement}>Increment</button>
+      <Button value="Decrement" dispatch={handleDecrement} />
+      <Display output={counter} />
+      <Button value="Increment" dispatch={handleIncrement} />
     </div>
   );
 }
